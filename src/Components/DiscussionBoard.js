@@ -19,12 +19,26 @@ const Board = () => {
       name: names[randomNumber(0, 5)],
       content: "<p>I love this course!</p>",
       date: new Date("01 Jan 2020 01:12:00 GMT"),
+      followups: [{
+        name: "Unkown",
+        content: "<p>I doubt!</p>",
+        },
+        {
+          name: "Unkown",
+          content: "<p>I agree!</p>",
+        }
+      ],
     },
     {
       profileImage: profile,
       name: names[randomNumber(0, 5)],
       content: "<p>I hate this course!</p>",
       date: new Date("01 Jan 2020 09:12:00 GMT"),
+      followups: [{
+        name: "Unkown",
+        content: "<p>Thanks for sharing!</p>",
+        },
+      ],
     },
   ];
 
@@ -39,6 +53,7 @@ const Board = () => {
         name: names[randomNumber(0, 5)],
         content: text,
         date: curDate,
+        followups: [{}],
       },
     ]);
   };

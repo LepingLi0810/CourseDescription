@@ -136,9 +136,10 @@ const DiscussionBoard = ({ onSubmit, posts }) => {
         const newDate = buildDate(post.date)
         const newTime = buildTime(post.date)
 
+
         return (
           <React.Fragment key={idx}>
-            <Post {...post} date={newDate} time={newTime} />
+            <Post {...post} date={newDate} time={newTime}/>
             <hr className={`mt-0`} />
           </React.Fragment>
         )

@@ -7,20 +7,13 @@ import LikeButton from './Like'
 import FollowUp from './Follow'
 import styles from './post.module.css'
 
-const Post = ({ profileImage, name, content, date, time }) => {
+const Post = ({ profileImage, name, content, date, time, followups }) => {
   const clean = DOMPurify.sanitize(content)
-  const followups = [{
-    name: "Unkown",
-    content: "<p>I doubt!</p>",
-    },
-    {
-      name: "Unkown",
-      content: "<p>I agree!</p>",
-    }
-  ];
-  const followUps= followups.map((follow) => (
+
+  const followUps = followups.map((follow, idx) => (
     <FollowUp name={follow.name} content={follow.content}/>
   ));
+
 
   return (
     <div className='panel panel-default p-3'>
